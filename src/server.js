@@ -17,9 +17,7 @@ app.get("/dow", (req, res) => {
 
     const headers = Object.keys(resultSQL[0]);
 
-    headers.forEach((header, index) => {
-      worksheet.cell(1, index + 1).string(header);
-    });
+    headers.forEach((header, index) => { worksheet.cell(1, index + 1).string(header) });
     resultSQL.forEach((data, dataIndex) => {
       headers.forEach((header, headerIndex) => {
         const value = data[header];
