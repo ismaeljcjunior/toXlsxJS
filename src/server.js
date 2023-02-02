@@ -12,7 +12,7 @@ app.get("/dow", (req, res) => {
     const worksheet = workbook.addWorksheet("Sheet 1");
 
     const resultSQL = await dbMssql.query(process.env.SELECT_BASE, {
-      type: dbMssql.QueryTypes.SELECT,
+      type: dbMssql.QueryTypes.SELECT,c
     });
 
     const headers = Object.keys(resultSQL[0]);
